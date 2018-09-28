@@ -1,0 +1,47 @@
+<script>
+/**
+callback
+	Função que é executada em cada valor no array, recebe quatro argumentos:
+
+	Acumulador
+	O valor retornado na última invocação do callback, ou o argumento Valor Inicial, se fornecido. (exemplo abaixo).
+	
+	valorAtual
+	O elemento atual que está sendo processado no array.
+	
+	indice
+	O índice do elemento atual que está sendo processado no array.
+	
+	array
+	O array ao qual a função reduce() foi chamada.
+	
+	valorInicial
+	Opcional. Objeto a ser usado como o primeiro argumento da primeira chamada da função callback. Chamar reduce() em uma array vazia sem valor inicial é um erro.
+
+	O método reduce()executa uma função reducer (provida por você) para cada membro do array, resultando num único valor de retorno.
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+*/
+var arr = [1,2,3,4,5];
+var reduce = arr.reduceRight(function(acumulado,atual,index,array) {
+	return acumulado + atual;
+}, 0)
+/** 
+	o reduce percore todo o array e retorno o valor acumulado/somado
+	1ª: 0 + 1 = 1
+	2ª: 1 + 2 = 3
+	3ª: 3 + 3 = 6
+	4ª: 6 + 4 = 10
+	5ª: 10 + 5 = 15
+	
+	Se o atual for 5
+	1ª: 5 + 1 = 6
+	2ª: 6 + 2 = 8
+	3ª: 8 + 3 = 11
+	4ª: 11 + 4 = 15
+	5ª: 15 + 5 = 20
+	
+	nesse caso, 15 é o valor final.
+**/
+console.log(reduce);
+</script>

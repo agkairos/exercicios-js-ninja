@@ -1,0 +1,31 @@
+<script>
+/**
+O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+
+callback
+	Função é um predicado, para testar cada elemento do array. Retorna true para manter o elemento, false caso contrário, recebendo três argumentos:
+	
+	element
+	O elemento que está sendo processado no array.
+
+	index
+	O índice do elemento atual que está sendo processado no array.
+	
+	array
+	O  filter do array foi chamado.
+	
+	thisArg Optional
+	Opcional. Valor a ser usado como this durante a execução do callback.
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro
+*/
+var arr = [1,2,3,4,5];
+var filter = arr.filter(function(item,index,array) {
+	return item > 2;
+	
+	//retornando como objeto
+	//return {item:item, index:index}
+})
+
+console.log(filter);
+</script>
