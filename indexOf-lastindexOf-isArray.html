@@ -1,0 +1,34 @@
+<script>
+/**
+O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+
+O método lastIndexOf() retorna o ultimo índice que um certo elemento pode ser encontrado no array, ou -1 se o elemento não estiver presente. O array é pesquisado de traz para frente, começando pelo fromIndex.
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
+
+O método Array.isArray() retorna true se um objeto é uma array, e false se não é.
+NAO USAR TYPEOF, POIS PRA OBJETO E ARRAY VAI SEMPRE RETORNAR ARRAY
+
+
+*/
+var array = [2, 5, 9];
+console.log(array.indexOf(2));     // 0
+console.log(array.indexOf(7));     // -1
+console.log(array.indexOf(9, 2));  // 2
+console.log(array.indexOf(2, -1)); // -1
+console.log(array.indexOf(2, -3)); // 0
+
+
+var array = [2, 5, 9, 2];
+console.log(array.lastIndexOf(2));     // 3
+console.log(array.lastIndexOf(7));     // -1
+console.log(array.lastIndexOf(2, 3));  // 3
+console.log(array.lastIndexOf(2, 2));  // 0
+console.log(array.lastIndexOf(2, -2)); // 0
+console.log(array.lastIndexOf(2, -1)); // 3
+
+
+console.log(Array.isArray([]));
+</script>
